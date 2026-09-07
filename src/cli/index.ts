@@ -70,8 +70,8 @@ const cli = yargs(hideBin(process.argv))
   // Health commands
   .command(healthCommands)
 
-  // Default command
-  .default('help');
+  // Default command shows help
+  .demandCommand(0);
 
 // Execute CLI
 cli.parseAsync().catch((error: Error) => {

@@ -11,7 +11,6 @@ export enum LogLevel {
 
 class Logger {
   private level: LogLevel = LogLevel.INFO;
-  private verbose: boolean = false;
 
   setLevel(levelOrName: LogLevel | 'debug' | 'info' | 'warn' | 'error'): void {
     if (typeof levelOrName === 'string') {
