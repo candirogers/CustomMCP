@@ -1,0 +1,56 @@
+{
+  "name": "@photos/mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol for authenticated cloud photo access with multi-session support",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "photos": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node --test 'dist/**/*.test.js'",
+    "test:watch": "node --test --watch 'dist/**/*.test.js'",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write 'src/**/*.ts'",
+    "type-check": "tsc --noEmit",
+    "start": "node dist/index.js",
+    "cli": "node dist/cli/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "photos",
+    "cloud-storage",
+    "multi-session",
+    "google-photos",
+    "aws-s3",
+    "azure",
+    "onedrive"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^22.0.0",
+    "axios": "^1.7.0",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0",
+    "ioredis": "^5.4.0",
+    "node-cache": "^5.1.2",
+    "sqlite3": "^5.1.7",
+    "uuid": "^10.0.0",
+    "yargs": "^17.8.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
